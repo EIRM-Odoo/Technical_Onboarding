@@ -9,7 +9,12 @@
     'website' : 'https://github.com/EIRM-Odoo/Technical_Onboarding',
     'category' : 'Custom Modules/Kawiil',
     'depends' : ['base'],
-    'data' : [],
+    'data' : [
+        'security/registry_groups.xml',
+        'security/ir.model.access.csv',
+        'views/registry_menuitems.xml',
+        'views/registry_views.xml'
+    ],
     'demo' : [
         'demo/registry_demo.xml',
     ],

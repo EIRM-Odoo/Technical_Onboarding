@@ -12,7 +12,7 @@ class MotorcycleRegistry(models.Model):
     vin = fields.Char(string="VIN", required=True)
     first_name = fields.Char(string="First Name", required=True)
     last_name = fields.Char(string="Last Name", required=True)
-    picture = fields.Image("Picture", max_width=740, max_height=620)
+    picture = fields.Image("Picture", max_width=240, max_height=180)
     current_mileage = fields.Float("Current Mileage", digits="Miles")
     license_plate = fields.Char(string="License Plate")
     certificate_title = fields.Binary("Certificate Title")
