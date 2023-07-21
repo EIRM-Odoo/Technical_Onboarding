@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="compare_website">
+        <t t-call="website.layout">
+            <t t-set="title">Compare</t>
+            <div class="oe_structure">
+                <h1>Motorcycle Comparison</h1>
+                <div class="container">
+                    <div class="row">
+                        <div class="card col-sm">
+                            <div class="card-body text-center">
+                                <h2>Specs</h2>
+                                <strong class="list-group-item o_default_snippet_text">Launch Date:</strong>
+                                <strong class="list-group-item o_default_snippet_text">Range:</strong>
+                                <strong class="list-group-item o_default_snippet_text">Horsepower:</strong>
+                                <strong class="list-group-item o_default_snippet_text">Torque:</strong>
+                                <strong class="list-group-item o_default_snippet_text">Top Speed:</strong>
+                                <strong class="list-group-item o_default_snippet_text">Battery Capacity:</strong>
+                                <strong class="list-group-item o_default_snippet_text">Curb Weight:</strong>
+                            </div>
+                        </div>
+                        <t t-foreach="motorcycles" t-as="moto">
+                            <div class="card col-sm">
+                                <div class="card-body text-center">
+                                    <h3>
+                                        <t t-esc="moto.name"/>
+                                    </h3>
+                                    <strong class="list-group-item o_default_snippet_text" t-field="moto.date"/>
+                                    <strong class="list-group-item o_default_snippet_text" t-field="moto.range"/>
+                                    <strong class="list-group-item o_default_snippet_text" t-field="moto.hp"/>
+                                    <strong class="list-group-item o_default_snippet_text" t-field="moto.torque"/>
+                                    <strong class="list-group-item o_default_snippet_text" t-field="moto.tspeed"/>
+                                    <strong class="list-group-item o_default_snippet_text" t-field="moto.batteryc"/>
+                                    <strong class="list-group-item o_default_snippet_text" t-field="moto.curbw"/>
+                                    <img t-if="moto.image_1920" t-att-src="image_data_uri(moto.image_1920)"/>
+                                </div>
+                            </div>
+                        </t>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+</odoo>
